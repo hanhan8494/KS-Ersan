@@ -6,10 +6,13 @@
     <file url="file://$PROJECT_DIR$/ersan-common/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ersan-common/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ersan-order-service/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ersan-order-service/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ersan-pojo/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ersan-pojo/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ersan-task/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ersan-task/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/ersan-uniapp/src/main/java" charset="UTF-8" />
+    <file url="file://$PROJECT_DIR$/ersan-uniapp/src/main/resources" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/java" charset="UTF-8" />
     <file url="file://$PROJECT_DIR$/src/main/resources" charset="UTF-8" />
   </component>

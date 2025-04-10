@@ -1,141 +1,174 @@
 <project xmlns="http://maven.apache.org/POM/4.0.0" xmlns:xsi="http://www.w3.org/2001/XMLSchema-instance"
-  xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
-  <modelVersion>4.0.0</modelVersion>
-  <groupId>com.itersan</groupId>
-  <artifactId>ersan-Mall</artifactId>
-  <version>1.0-SNAPSHOT</version>
-  <packaging>pom</packaging>
-  <name>Archetype - ersan-Mall</name>
-  <url>http://maven.apache.org</url>
+         xsi:schemaLocation="http://maven.apache.org/POM/4.0.0 http://maven.apache.org/maven-v4_0_0.xsd">
 
-<!--   项目所有子项目-->
-  <modules>
-    <module>ersan-uniapp</module>  <!--    小程序软件端-->
-    <module>ersan-common</module>  <!--    常用类，工具类-->
-    <module>ersan-pojo</module>    <!--    实体类-->
-    <module>ersan-admin</module>   <!--    web端-->
-    <module>ersan-task</module>    <!--    定时任务-->
-    <module>ersan-order-service</module> <!--    后端订单服务端-->
-  </modules>
+    <parent>
+        <groupId>org.springframework.boot</groupId>
+        <artifactId>spring-boot-starter-parent</artifactId>
+        <version>2.5.5</version> <!-- 或更新版本 -->
+    </parent>
+    <modelVersion>4.0.0</modelVersion>
+    <groupId>com.itersan</groupId>
+    <artifactId>ersan-Mall</artifactId>
+    <version>1.0-SNAPSHOT</version>
+    <packaging>pom</packaging>
+    <name>Archetype - ersan-Mall</name>
+    <url>http://maven.apache.org</url>
 
-
-
-
-  <properties>
-    <revision>0.0.1-SNAPSHOT</revision>      <!-- 项目版本号 -->
-    <java.version>17</java.version>   <!-- JDK 版本 -->
-    <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- 项目编码 -->
-    <maven.version>3.8.1</maven.version> <!-- Maven 相关版本号 -->
-    <swager.version>3.0.2</swager.version> <!-- swagger版本号 -->
-    <lombok.version>1.18.30</lombok.version> <!-- lombok依赖包版本 -->
-    <mybatis.version>2.2.0</mybatis.version> <!-- mybatis版本号 -->
-    <fastjson.version>1.2.76</fastjson.version> <!-- fastjson版本号 -->
-    <commons.version>2.6</commons.version> <!-- commons-lang版本号 -->
-    <druid.version>1.2.1</druid.version>  <!-- druid版本号 -->
-    <pagehelper.version>1.3.0</pagehelper.version> <!-- 分页插件版本号 -->
-    <oss.version>3.10.2</oss.version> <!-- 阿里云OSS版本号 -->
-    <aspectj.version>1.9.4</aspectj.version> <!-- aspectj版本号 -->
-    <jjwt.version>0.9.1</jjwt.version> <!-- jwt版本号 -->
-    <jaxb-api.version>2.3.1</jaxb-api.version> <!-- jaxb-api版本号 -->
-    <poi.version>3.16</poi.version> <!-- poi版本号 -->
-    <wx.version>0.4.8</wx.version> <!-- 微信支付版本号 -->
-  </properties>
+    <!--   项目所有子项目-->
+    <modules>
+        <module>ersan-uniapp</module>  <!--    小程序软件端-->
+        <module>ersan-common</module>  <!--    常用类，工具类-->
+        <module>ersan-pojo</module>    <!--    实体类-->
+        <module>ersan-admin</module>   <!--    web端-->
+        <module>ersan-task</module>    <!--    定时任务-->
+        <module>ersan-order-service</module> <!--    后端订单服务端-->
+    </modules>
 
 
-  <!-- 统一依赖管理 -->
-  <dependencyManagement>
-    <dependencies>
-      <dependency>
-        <groupId>org.mybatis.spring.boot</groupId>
-        <artifactId>mybatis-spring-boot-starter</artifactId>
-        <version>${mybatis.version}</version>
-      </dependency>
-<!--      Swagger 文档生成工具-->
-      <dependency>
-        <groupId>com.github.xiaoymin</groupId>
-        <artifactId>knife4j-spring-boot-starter</artifactId>
-        <version>${swager.version}</version>
-      </dependency>
-<!--      Java 注解库-->
-      <dependency>
-        <groupId>org.projectlombok</groupId>
-        <artifactId>lombok</artifactId>
-        <version>${lombok.version}</version>
-      </dependency>
-<!--      阿里巴巴的 JSON 处理库-->
-      <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>fastjson</artifactId>
-        <version>${fastjson.version}</version>
-      </dependency>
-<!--      Apache Commons 项目中的常用工具类库-->
-      <dependency>
-        <groupId>commons-lang</groupId>
-        <artifactId>commons-lang</artifactId>
-        <version>${commons.version}</version>
-      </dependency>
-<!--      阿里巴巴的数据库连接池-->
-      <dependency>
-        <groupId>com.alibaba</groupId>
-        <artifactId>druid-spring-boot-starter</artifactId>
-        <version>${druid.version}</version>
-      </dependency>
-<!--      分页插件-->
-      <dependency>
-        <groupId>com.github.pagehelper</groupId>
-        <artifactId>pagehelper-spring-boot-starter</artifactId>
-        <version>${pagehelper.version}</version>
-      </dependency>
-<!--      AspectJ 运行时库，提供面向切面编程（AOP）支持-->
-      <dependency>
-        <groupId>org.aspectj</groupId>
-        <artifactId>aspectjrt</artifactId>
-        <version>${aspectj.version}</version>
-      </dependency>
-<!--      AspectJ 运行时库，提供面向切面编程（AOP）支持-->
-      <dependency>
-        <groupId>org.aspectj</groupId>
-        <artifactId>aspectjweaver</artifactId>
-        <version>${aspectj.version}</version>
-      </dependency>
-      <!--jwt令牌-->
-      <dependency>
-        <groupId>io.jsonwebtoken</groupId>
-        <artifactId>jjwt</artifactId>
-        <version>${jjwt.version}</version>
-      </dependency>
-     <!--     阿里云OSS-->
-      <dependency>
-        <groupId>com.aliyun.oss</groupId>
-        <artifactId>aliyun-sdk-oss</artifactId>
-        <version>${oss.version}</version>
-      </dependency>
-<!--      Java XML 绑定 API，用于将 Java 对象与 XML 数据互转-->
-      <dependency>
-        <groupId>javax.xml.bind</groupId>
-        <artifactId>jaxb-api</artifactId>
-        <version>${jaxb-api.version}</version>
-      </dependency>
-      <!-- Apache POI 库 -->
-      <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi</artifactId>
-        <version>${poi.version}</version>
-      </dependency>
-     <!--      Apache POI 扩展-->
-      <dependency>
-        <groupId>org.apache.poi</groupId>
-        <artifactId>poi-ooxml</artifactId>
-        <version>${poi.version}</version>
-      </dependency>
-      <!--微信支付 SDK-->
-      <dependency>
-        <groupId>com.github.wechatpay-apiv3</groupId>
-        <artifactId>wechatpay-apache-httpclient</artifactId>
-        <version>${wx.version}</version>
-      </dependency>
+    <properties>
+        <revision>0.0.1-SNAPSHOT</revision>      <!-- 项目版本号 -->
+        <java.version>17</java.version>   <!-- JDK 版本 -->
+        <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- 项目编码 -->
+        <maven.version>3.8.1</maven.version> <!-- Maven 相关版本号 -->
+        <test.version>2.5.6</test.version> <!-- 测试版本号 -->
+        <mysql.version>8.0.32</mysql.version> <!-- mysql版本号 -->
+        <web.version>3.4.4</web.version> <!-- web版本号 -->
+        <swager.version>3.0.2</swager.version> <!-- swagger版本号 -->
+        <lombok.version>1.18.30</lombok.version> <!-- lombok依赖包版本 -->
+        <mybatis.version>2.2.0</mybatis.version> <!-- mybatis版本号 -->
+        <mybatis-test.version>2.1.4</mybatis-test.version> <!-- mybatis测试版本号 -->
+        <fastjson.version>1.2.76</fastjson.version> <!-- fastjson版本号 -->
+        <commons.version>2.6</commons.version> <!-- commons-lang版本号 -->
+        <druid.version>1.2.1</druid.version>  <!-- druid版本号 -->
+        <pagehelper.version>1.3.0</pagehelper.version> <!-- 分页插件版本号 -->
+        <oss.version>3.10.2</oss.version> <!-- 阿里云OSS版本号 -->
+        <aspectj.version>1.9.4</aspectj.version> <!-- aspectj版本号 -->
+        <jjwt.version>0.9.1</jjwt.version> <!-- jwt版本号 -->
+        <jaxb-api.version>2.3.1</jaxb-api.version> <!-- jaxb-api版本号 -->
+        <poi.version>3.16</poi.version> <!-- poi版本号 -->
+        <wx.version>0.4.8</wx.version> <!-- 微信支付版本号 -->
+    </properties>
 
-    </dependencies>
-  </dependencyManagement>
+
+    <!-- 统一依赖管理 -->
+    <dependencyManagement>
+        <dependencies>
+            <!--  测试单元-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-test</artifactId>
+                <version>${test.version}</version>
+            </dependency>
+            <!--     MySQL数据源-->
+            <dependency>
+                <groupId>com.mysql</groupId>
+                <artifactId>mysql-connector-j</artifactId>
+                <version>${mysql.version}</version>
+            </dependency>
+            <!--      web依赖-->
+            <dependency>
+                <groupId>org.springframework.boot</groupId>
+                <artifactId>spring-boot-starter-web</artifactId>
+                <version>${web.version}</version>
+            </dependency>
+            <!--      Mybatis依赖-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter</artifactId>
+                <version>${mybatis.version}</version>
+            </dependency>
+            <!--      Mybatis测试依赖-->
+            <dependency>
+                <groupId>org.mybatis.spring.boot</groupId>
+                <artifactId>mybatis-spring-boot-starter-test</artifactId>
+                <version>${mybatis-test.version}</version>
+            </dependency>
+            <!--  Swagger 文档生成工具-->
+            <dependency>
+                <groupId>com.github.xiaoymin</groupId>
+                <artifactId>knife4j-spring-boot-starter</artifactId>
+                <version>${swager.version}</version>
+            </dependency>
+            <!--   Java 注解库-->
+            <dependency>
+                <groupId>org.projectlombok</groupId>
+                <artifactId>lombok</artifactId>
+                <version>${lombok.version}</version>
+            </dependency>
+            <!--      阿里巴巴的 JSON 处理库-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>fastjson</artifactId>
+                <version>${fastjson.version}</version>
+            </dependency>
+            <!--      Apache Commons 项目中的常用工具类库-->
+            <dependency>
+                <groupId>commons-lang</groupId>
+                <artifactId>commons-lang</artifactId>
+                <version>${commons.version}</version>
+            </dependency>
+            <!--      阿里巴巴的数据库连接池-->
+            <dependency>
+                <groupId>com.alibaba</groupId>
+                <artifactId>druid-spring-boot-starter</artifactId>
+                <version>${druid.version}</version>
+            </dependency>
+            <!--      分页插件-->
+            <dependency>
+                <groupId>com.github.pagehelper</groupId>
+                <artifactId>pagehelper-spring-boot-starter</artifactId>
+                <version>${pagehelper.version}</version>
+            </dependency>
+            <!--      AspectJ 运行时库，提供面向切面编程（AOP）支持-->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjrt</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+            <!--      AspectJ 运行时库，提供面向切面编程（AOP）支持-->
+            <dependency>
+                <groupId>org.aspectj</groupId>
+                <artifactId>aspectjweaver</artifactId>
+                <version>${aspectj.version}</version>
+            </dependency>
+            <!--jwt令牌-->
+            <dependency>
+                <groupId>io.jsonwebtoken</groupId>
+                <artifactId>jjwt</artifactId>
+                <version>${jjwt.version}</version>
+            </dependency>
+            <!--     阿里云OSS-->
+            <dependency>
+                <groupId>com.aliyun.oss</groupId>
+                <artifactId>aliyun-sdk-oss</artifactId>
+                <version>${oss.version}</version>
+            </dependency>
+            <!--      Java XML 绑定 API，用于将 Java 对象与 XML 数据互转-->
+            <dependency>
+                <groupId>javax.xml.bind</groupId>
+                <artifactId>jaxb-api</artifactId>
+                <version>${jaxb-api.version}</version>
+            </dependency>
+            <!-- Apache POI 库 -->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!--      Apache POI 扩展-->
+            <dependency>
+                <groupId>org.apache.poi</groupId>
+                <artifactId>poi-ooxml</artifactId>
+                <version>${poi.version}</version>
+            </dependency>
+            <!--微信支付 SDK-->
+            <dependency>
+                <groupId>com.github.wechatpay-apiv3</groupId>
+                <artifactId>wechatpay-apache-httpclient</artifactId>
+                <version>${wx.version}</version>
+            </dependency>
+
+        </dependencies>
+    </dependencyManagement>
 
 </project>
