@@ -30,6 +30,20 @@
         <java.version>17</java.version>
     </properties>
     <dependencies>
+
+
+        <dependency>
+            <groupId>com.itersan</groupId>
+            <artifactId>ersan-pojo</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
+        <dependency>
+            <groupId>com.itersan</groupId>
+            <artifactId>ersan-common</artifactId>
+            <version>1.0-SNAPSHOT</version>
+        </dependency>
+
         <dependency>
             <groupId>org.springframework.boot</groupId>
             <artifactId>spring-boot-starter-web</artifactId>
@@ -46,6 +60,8 @@
             <artifactId>logback-classic</artifactId>
             <version>1.2.3</version> <!-- 版本需与 Spring Boot 兼容 -->
         </dependency>
+
+
     </dependencies>
 
     <build>

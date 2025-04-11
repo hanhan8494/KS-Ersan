@@ -1,1 +1,84 @@
-spring.application.name=ersan-admin
+
+spring:
+  application:
+    name: ersan-admin
+  main:
+    allow-circular-references: true
+  #数据源配置
+  datasource:
+    druid:
+      driver-class-name: ${KS.datasource.driver-class-name}
+      url: jdbc:mysql://${KS.datasource.host}:${sky.datasource.port}/${sky.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
+      username: ${KS.datasource.username}
+      password: ${KS.datasource.password}
+  #用于文件上传
+  servlet:
+    multipart:
+      # 单个文件大小
+      max-file-size: 10MB
+      # 设置总上传的文件大小
+      max-request-size: 100MB
+      enabled: true
+  #redis配置
+  redis:
+    # 地址
+    host: ${redis.host}
+    # 端口，默认为6379
+    port: ${redis.port}
+    # 数据库索引
+    database: ${redis.database}
+    # 密码
+    password: ${redis.password}
+
+#tomcat服务器配置
+server:
+  port: 8080
+  tomcat:
+    #    最大线程数
+    max-threads: 1000
+    #    等待队列
+    accept-count: 300
+    #    空闲线程活跃
+    min-spare-threads: 200
+    #    会话超时时间
+    session-timeout: 30
+
+
+#阿里云oss配置
+alioss:
+  endpoint: ${alioss.endpoint}
+  accessKeyId: ${alioss.access-key-id}
+  accessKeySecret: ${alioss.access-key-secret}
+  bucket-name: ${alioss.bucket-name}
+
+
+#日志
+logging:
+  file:
+    #日志存放位置
+    name: D:/logs/ersan-admin.log
+  logback:
+    rollingpolicy:
+      #日志文件多大进行归档
+      max-file-size: 100MB
+      #所有归档文件达到这个值删除
+      total-size-cap: 1GB
+      #归档日志保留时间
+      max-history: 3
+
+# MyBatis配置
+
+mybatis:
+  configuration:
+    #开启驼峰命名
+    map-underscore-to-camel-case: true
+
+
+# 防止XSS攻击
+xss:
+  # 过滤开关
+  enabled: true
+  # 排除链接（多个用逗号分隔）
+  excludes: /system/notice
+  # 匹配链接
+  urlPatterns: /system/*,/monitor/*,/tool/*

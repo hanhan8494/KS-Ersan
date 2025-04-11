@@ -16,7 +16,7 @@
 
     <!--   项目所有子项目-->
     <modules>
-        <module>ersan-uniapp</module>  <!--    小程序软件端-->
+        <module>ersan-uniapp</module>  <!--    小程序,软件端-->
         <module>ersan-common</module>  <!--    常用类，工具类-->
         <module>ersan-pojo</module>    <!--    实体类-->
         <module>ersan-admin</module>   <!--    web端-->
