@@ -6,7 +6,23 @@
         <artifactId>ersan-Mall</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
+    <dependencies>
+        <dependency>
+            <groupId>org.projectlombok</groupId>
+            <artifactId>lombok</artifactId>
+        </dependency>
+        <!--  配置类注解-提供 IoC 容器和基础依赖注入-->
+        <dependency>
+            <groupId>org.springframework</groupId>
+            <artifactId>spring-context</artifactId>
+        </dependency>
+        <!--  提供快速启动和简化配置的脚手架-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot</artifactId>
+        </dependency>
 
+    </dependencies>
     <artifactId>ersan-common</artifactId>
     <name>Archetype - ersan-common</name>
     <url>http://maven.apache.org</url>

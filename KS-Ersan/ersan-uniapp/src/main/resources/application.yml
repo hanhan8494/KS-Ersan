@@ -1,3 +1,4 @@
+
 spring:
   application:
     name: ersan-admin
@@ -31,7 +32,9 @@ spring:
 
 #tomcat服务器配置
 server:
-  port: 8081
+#  后端端口号
+  port: 8080
+  #tomcat服务器配置
   tomcat:
     #    最大线程数
     max-threads: 1000
@@ -41,14 +44,6 @@ server:
     min-spare-threads: 200
     #    会话超时时间
     session-timeout: 30
-
-
-#阿里云oss配置
-alioss:
-  endpoint: ${alioss.endpoint}
-  accessKeyId: ${alioss.access-key-id}
-  accessKeySecret: ${alioss.access-key-secret}
-  bucket-name: ${alioss.bucket-name}
 
 
 #日志
@@ -81,3 +76,20 @@ xss:
   excludes: /system/notice
   # 匹配链接
   urlPatterns: /system/*,/monitor/*,/tool/*
+
+
+sky:
+  # 阿里云oss配置
+  alioss:
+    endpoint: ${alioss.endpoint}
+    accessKeyId: ${alioss.access-key-id}
+    accessKeySecret: ${alioss.access-key-secret}
+    bucket-name: ${alioss.bucket-name}
+  #  微信支付
+  wechat:
+    appid: wx43b187f9c8ee430f
+    secret: 8d875f9d9bc6dccdd148749c7bdb8bee
+
+  webmvc:
+    #  前端项目端口号
+    path: ${webmvc.path}
