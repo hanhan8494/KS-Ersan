@@ -32,9 +32,7 @@ spring:
 
 #tomcat服务器配置
 server:
-#  后端端口号
   port: 8080
-  #tomcat服务器配置
   tomcat:
     #    最大线程数
     max-threads: 1000
@@ -87,9 +85,8 @@ sky:
     bucket-name: ${alioss.bucket-name}
   #  微信支付
   wechat:
-    appid: wx43b187f9c8ee430f
-    secret: 8d875f9d9bc6dccdd148749c7bdb8bee
-
+    appid: ${wechat.appid}
+    secret: ${wechat.secret}
   webmvc:
     #  前端项目端口号
     path: ${webmvc.path}
