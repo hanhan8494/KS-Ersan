@@ -1,7 +1,7 @@
 
 spring:
   application:
-    name: ersan-admin
+    name: ersan-uniapp
   main:
     allow-circular-references: true
   #数据源配置
@@ -48,7 +48,7 @@ server:
 logging:
   file:
     #日志存放位置
-    name: D:/logs/ersan-admin.log
+    name: D:/logs/ersan-uniapp.log
   logback:
     rollingpolicy:
       #日志文件多大进行归档
