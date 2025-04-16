@@ -13,7 +13,7 @@ import org.springframework.web.reactive.function.client.WebClient;
 import org.springframework.web.reactive.function.client.support.WebClientAdapter;
 import org.springframework.web.service.invoker.HttpExchangeAdapter;
 import org.springframework.web.service.invoker.HttpServiceProxyFactory;
-import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
+
 
 
 //阿里云API调用

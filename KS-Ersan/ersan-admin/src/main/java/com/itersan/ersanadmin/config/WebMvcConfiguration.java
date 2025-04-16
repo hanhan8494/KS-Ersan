@@ -3,7 +3,6 @@ package com.itersan.ersanadmin.config;
 
 import com.itersan.properties.WebMvcProperties;
 import org.springframework.beans.factory.annotation.Autowired;
-import org.springframework.boot.context.properties.ConfigurationProperties;
 import org.springframework.context.annotation.Configuration;
 import org.springframework.web.servlet.config.annotation.CorsRegistry;
 import org.springframework.web.servlet.config.annotation.WebMvcConfigurer;
@@ -24,5 +23,6 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
                 .allowedHeaders("*")  // 允许的请求头
                 .allowCredentials(true);  // 是否允许携带凭证（如 cookie）
     }
+
 
 }
