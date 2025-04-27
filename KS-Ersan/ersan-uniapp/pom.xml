@@ -58,7 +58,7 @@
         <dependency>
             <groupId>ch.qos.logback</groupId>
             <artifactId>logback-classic</artifactId>
-            <version>1.2.3</version> <!-- 版本需与 Spring Boot 兼容 -->
+            <version>1.4.11</version> <!-- 版本需与 Spring Boot 兼容 -->
         </dependency>
 
 

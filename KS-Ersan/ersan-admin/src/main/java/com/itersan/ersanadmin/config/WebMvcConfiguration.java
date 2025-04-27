@@ -21,7 +21,8 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
                 .allowedOrigins(webMvcProperties.getPath())  // 前端开发服务器地址
                 .allowedMethods("GET", "POST", "PUT", "DELETE")  // 允许的HTTP方法
                 .allowedHeaders("*")  // 允许的请求头
-                .allowCredentials(true);  // 是否允许携带凭证（如 cookie）
+                .allowCredentials(true)  // 是否允许携带凭证（如 cookie）
+                .maxAge(3600);
     }
 
 

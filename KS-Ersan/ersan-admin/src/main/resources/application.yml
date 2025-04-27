@@ -13,6 +13,20 @@ spring:
       url: jdbc:mysql://${KS.datasource.host}:${sky.datasource.port}/${sky.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
       username: ${KS.datasource.username}
       password: ${KS.datasource.password}
+  #redis配置  注:3版本以上在data后面添加redis
+  data:
+    redis:
+      host: ${KS.redis.host}
+      port: ${KS.redis.port}
+      password: ${KS.redis.password}
+      lettuce:
+        pool:
+          max-active: 8 #最大连接
+          max-idle: 8   #最大空闲连接
+          min-idle: 0   #最小空闲连接
+          max-wait: 100 #连接等待时间
+
+
   #用于文件上传
   servlet:
     multipart:
@@ -21,8 +35,6 @@ spring:
       # 设置总上传的文件大小
       max-request-size: 100MB
       enabled: true
-  #redis配置
-
 
 
 #tomcat服务器配置
