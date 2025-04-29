@@ -1,4 +1,4 @@
-package com.itersan.ersanadmin.service.serviceImpl;
+package com.itersan.ersanadmin.service;
 
 
 import org.springframework.web.bind.annotation.RequestParam;

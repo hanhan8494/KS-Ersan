@@ -26,7 +26,7 @@
 
 
     <properties>
-        <revision>0.0.1-SNAPSHOT</revision>      <!-- 项目版本号 -->
+        <revision>0.0.1-SNAPSHOT</revision>  <!-- 项目版本号 -->
         <java.version>17</java.version>   <!-- JDK 版本 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- 项目编码 -->
         <maven.version>3.8.1</maven.version> <!-- Maven 相关版本号 -->
@@ -47,8 +47,9 @@
         <jaxb-api.version>2.3.1</jaxb-api.version> <!-- jaxb-api版本号 -->
         <poi.version>3.16</poi.version> <!-- poi版本号 -->
         <wx.version>0.4.8</wx.version> <!-- 微信支付版本号 -->
-        <redis.version>3.2.0</redis.version> <!-- SpringbootDateredis依赖-->
+        <redis.version>3.2.0</redis.version> <!-- Springboot Date redis依赖-->
         <pool2.version>2.11.0</pool2.version> <!--连接池-->
+        <hutool.version>5.8.16</hutool.version> <!-- 糊涂包-->
     </properties>
 
 
@@ -61,73 +62,73 @@
                 <artifactId>spring-boot-starter-test</artifactId>
                 <version>${test.version}</version>
             </dependency>
-            <!--     MySQL数据源-->
+            <!-- MySQL数据源-->
             <dependency>
                 <groupId>com.mysql</groupId>
                 <artifactId>mysql-connector-j</artifactId>
                 <version>${mysql.version}</version>
             </dependency>
-            <!--      web依赖-->
+            <!-- web依赖-->
             <dependency>
                 <groupId>org.springframework.boot</groupId>
                 <artifactId>spring-boot-starter-web</artifactId>
                 <version>${web.version}</version>
             </dependency>
-            <!--      Mybatis依赖-->
+            <!-- Mybatis依赖-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
             </dependency>
-            <!--      Mybatis测试依赖-->
+            <!-- Mybatis测试依赖-->
             <dependency>
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter-test</artifactId>
                 <version>${mybatis-test.version}</version>
             </dependency>
-            <!--  Swagger 文档生成工具-->
+            <!-- Swagger 文档生成工具-->
             <dependency>
                 <groupId>com.github.xiaoymin</groupId>
                 <artifactId>knife4j-spring-boot-starter</artifactId>
                 <version>${swager.version}</version>
             </dependency>
-            <!--   Java 注解库-->
+            <!-- Java 注解库-->
             <dependency>
                 <groupId>org.projectlombok</groupId>
                 <artifactId>lombok</artifactId>
                 <version>${lombok.version}</version>
             </dependency>
-            <!--      阿里巴巴的 JSON 处理库-->
+            <!-- 阿里巴巴的 JSON 处理库-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>fastjson</artifactId>
                 <version>${fastjson.version}</version>
             </dependency>
-            <!--      Apache Commons 项目中的常用工具类库-->
+            <!-- Apache Commons 项目中的常用工具类库-->
             <dependency>
                 <groupId>commons-lang</groupId>
                 <artifactId>commons-lang</artifactId>
                 <version>${commons.version}</version>
             </dependency>
-            <!--      阿里巴巴的数据库连接池-->
+            <!-- 阿里巴巴的数据库连接池-->
             <dependency>
                 <groupId>com.alibaba</groupId>
                 <artifactId>druid-spring-boot-starter</artifactId>
                 <version>${druid.version}</version>
             </dependency>
-            <!--      分页插件-->
+            <!-- 分页插件-->
             <dependency>
                 <groupId>com.github.pagehelper</groupId>
                 <artifactId>pagehelper-spring-boot-starter</artifactId>
                 <version>${pagehelper.version}</version>
             </dependency>
-            <!--      AspectJ 运行时库，提供面向切面编程（AOP）支持-->
+            <!-- AspectJ 运行时库，提供面向切面编程（AOP）支持-->
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjrt</artifactId>
                 <version>${aspectj.version}</version>
             </dependency>
-            <!--      AspectJ 运行时库，提供面向切面编程（AOP）支持-->
+            <!-- AspectJ 运行时库，提供面向切面编程（AOP）支持-->
             <dependency>
                 <groupId>org.aspectj</groupId>
                 <artifactId>aspectjweaver</artifactId>
@@ -139,13 +140,13 @@
                 <artifactId>jjwt</artifactId>
                 <version>${jjwt.version}</version>
             </dependency>
-            <!--     阿里云OSS-->
+            <!-- 阿里云OSS-->
             <dependency>
                 <groupId>com.aliyun.oss</groupId>
                 <artifactId>aliyun-sdk-oss</artifactId>
                 <version>${oss.version}</version>
             </dependency>
-            <!--      Java XML 绑定 API，用于将 Java 对象与 XML 数据互转-->
+            <!-- Java XML 绑定 API，用于将 Java 对象与 XML 数据互转-->
             <dependency>
                 <groupId>javax.xml.bind</groupId>
                 <artifactId>jaxb-api</artifactId>
@@ -157,7 +158,7 @@
                 <artifactId>poi</artifactId>
                 <version>${poi.version}</version>
             </dependency>
-            <!--      Apache POI 扩展-->
+            <!-- Apache POI 扩展-->
             <dependency>
                 <groupId>org.apache.poi</groupId>
                 <artifactId>poi-ooxml</artifactId>
@@ -180,6 +181,12 @@
                 <groupId>org.apache.commons</groupId>
                 <artifactId>commons.pool2</artifactId>
                 <version>${pool2.version}</version>
+            </dependency>
+            <!-- 糊涂包-->
+            <dependency>
+                <groupId>cn.hutool</groupId>
+                <artifactId>hutool-all</artifactId>
+                <version>${hutool.version}</version>
             </dependency>
 
         </dependencies>

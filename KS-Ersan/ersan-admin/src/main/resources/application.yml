@@ -39,7 +39,7 @@ spring:
 
 #tomcat服务器配置
 server:
-  port: 8080
+  port: 8083
   tomcat:
     #    最大线程数
     max-threads: 1000

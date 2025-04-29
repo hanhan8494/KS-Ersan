@@ -32,4 +32,15 @@ class ErsanAdminApplicationTests {
         User name = (User) redisTemplate.opsForValue().get("user:100");
         System.out.println(name);
     }
+
+    @Test
+    void testHash(){
+        redisTemplate.opsForHash().put("user:500","name","黄子宣");
+        redisTemplate.opsForHash().put("user:500","age",18);
+        Map entries = redisTemplate.opsForHash().entries("user:500");
+        System.out.println(entries);
+    }
+
+
+
 }
