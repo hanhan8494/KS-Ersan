@@ -18,10 +18,10 @@
     <modules>
         <module>ersan-uniapp</module>  <!--    小程序,软件端-->
         <module>ersan-common</module>  <!--    常用类，工具类-->
-        <module>ersan-pojo</module>    <!--    实体类-->
         <module>ersan-admin</module>   <!--    web端-->
         <module>ersan-task</module>    <!--    定时任务-->
-        <module>ersan-order-service</module> <!--    后端订单服务端-->
+        <module>ersan-order-service</module><!--    后端订单服务端-->
+        <module>ersan-pojo</module>    <!--        实体类-->
     </modules>
 
 
@@ -30,18 +30,17 @@
         <java.version>17</java.version>   <!-- JDK 版本 -->
         <project.build.sourceEncoding>UTF-8</project.build.sourceEncoding> <!-- 项目编码 -->
         <maven.version>3.8.1</maven.version> <!-- Maven 相关版本号 -->
-        <test.version>2.5.6</test.version> <!-- 测试版本号 -->
+        <test.version>3.2.0</test.version> <!-- 测试版本号 -->
         <mysql.version>8.0.32</mysql.version> <!-- mysql版本号 -->
         <web.version>3.4.4</web.version> <!-- web版本号 -->
         <swager.version>3.0.2</swager.version> <!-- swagger版本号 -->
         <lombok.version>1.18.30</lombok.version> <!-- lombok依赖包版本 -->
-        <mybatis.version>2.2.0</mybatis.version> <!-- mybatis版本号 -->
-        <mybatis-test.version>2.1.4</mybatis-test.version> <!-- mybatis测试版本号 -->
-        <fastjson.version>1.2.76</fastjson.version> <!-- fastjson版本号 -->
+        <mybatis.version>3.0.4</mybatis.version> <!-- mybatis版本号 -->
+        <fastjson.version>2.0.28</fastjson.version> <!-- fastjson版本号 -->
         <commons.version>2.6</commons.version> <!-- commons-lang版本号 -->
         <druid.version>1.2.1</druid.version>  <!-- druid版本号 -->
         <pagehelper.version>1.3.0</pagehelper.version> <!-- 分页插件版本号 -->
-        <oss.version>3.10.2</oss.version> <!-- 阿里云OSS版本号 -->
+         <oss.version>3.10.2</oss.version> <!-- 阿里云OSS版本号 -->
         <aspectj.version>1.9.4</aspectj.version> <!-- aspectj版本号 -->
         <jjwt.version>0.9.1</jjwt.version> <!-- jwt版本号 -->
         <jaxb-api.version>2.3.1</jaxb-api.version> <!-- jaxb-api版本号 -->
@@ -79,12 +78,6 @@
                 <groupId>org.mybatis.spring.boot</groupId>
                 <artifactId>mybatis-spring-boot-starter</artifactId>
                 <version>${mybatis.version}</version>
-            </dependency>
-            <!-- Mybatis测试依赖-->
-            <dependency>
-                <groupId>org.mybatis.spring.boot</groupId>
-                <artifactId>mybatis-spring-boot-starter-test</artifactId>
-                <version>${mybatis-test.version}</version>
             </dependency>
             <!-- Swagger 文档生成工具-->
             <dependency>

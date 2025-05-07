@@ -39,7 +39,8 @@ public class AliYunApiConfig {
     //2. 将WebClient 转换为 HttpExchangeAdapter
     @Bean
     public HttpExchangeAdapter httpExchangeAdapter(WebClient apiWebClient) {
-        return WebClientAdapter.create(apiWebClient); // WebClient → HttpExchangeAdapter
+        WebClientAdapter webClientAdapter = WebClientAdapter.create(apiWebClient);// WebClient → HttpExchangeAdapter
+        return webClientAdapter;
     }
 
 
@@ -56,7 +57,7 @@ public class AliYunApiConfig {
 
     //获取阿里云 地名查询code API
     @Bean
-    WeatherInterface weatherInterface(HttpServiceProxyFactory httpServiceProxyFactory) {
+    public WeatherInterface weatherInterface(HttpServiceProxyFactory httpServiceProxyFactory) {
         //获取代理对象
         WeatherInterface weatherInterface = httpServiceProxyFactory.createClient(WeatherInterface.class);
         return weatherInterface;

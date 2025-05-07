@@ -8,11 +8,10 @@ spring:
     active: dev
   #数据源配置
   datasource:
-    druid:
-      driver-class-name: ${KS.datasource.driver-class-name}
-      url: jdbc:mysql://${KS.datasource.host}:${sky.datasource.port}/${sky.datasource.database}?serverTimezone=Asia/Shanghai&useUnicode=true&characterEncoding=utf-8&zeroDateTimeBehavior=convertToNull&useSSL=false&allowPublicKeyRetrieval=true
-      username: ${KS.datasource.username}
-      password: ${KS.datasource.password}
+    driver-class-name: ${KS.datasource.driver-class-name}
+    url: jdbc:mysql://${KS.datasource.host}:${KS.datasource.port}/${KS.datasource.database}
+    username: ${KS.datasource.username}
+    password: ${KS.datasource.password}
   #redis配置  注:3版本以上在data后面添加redis
   data:
     redis:

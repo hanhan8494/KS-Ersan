@@ -7,11 +7,15 @@ import lombok.NoArgsConstructor;
 import java.io.Serializable;
 import java.util.Date;
 
+/**
+ * 用户表(User)实体类
+ *
+ * @author 三更
+ */
 @Data
 @AllArgsConstructor
 @NoArgsConstructor
 public class User implements Serializable {
-
     private static final long serialVersionUID = -40356785423868312L;
 
     /**

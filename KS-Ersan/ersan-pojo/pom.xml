@@ -6,20 +6,36 @@
         <artifactId>ersan-Mall</artifactId>
         <version>1.0-SNAPSHOT</version>
     </parent>
-
-
     <artifactId>ersan-pojo</artifactId>
     <name>Archetype - ersan-pojo</name>
     <url>http://maven.apache.org</url>
+    <version>1.0-SNAPSHOT</version>
+
+
     <dependencies>
+        <!--        lombok依赖-->
         <dependency>
             <groupId>org.projectlombok</groupId>
             <artifactId>lombok</artifactId>
-            <scope>provided</scope>
         </dependency>
+
+        <!--        springsecurity启动器-->
         <dependency>
-            <groupId>org.springframework.security</groupId>
-            <artifactId>spring-security-core</artifactId>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-security</artifactId>
         </dependency>
+        <!--        springsecurity启动器附加依赖-->
+        <dependency>
+            <groupId>org.springframework.boot</groupId>
+            <artifactId>spring-boot-starter-actuator</artifactId>
+        </dependency>
+        <!--         json-->
+        <dependency>
+            <groupId>com.alibaba</groupId>
+            <artifactId>fastjson</artifactId>
+        </dependency>
+
+
     </dependencies>
+
 </project>

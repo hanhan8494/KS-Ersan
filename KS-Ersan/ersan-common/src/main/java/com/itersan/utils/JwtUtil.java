@@ -7,7 +7,6 @@ import io.jsonwebtoken.SignatureAlgorithm;
 
 import javax.crypto.SecretKey;
 import javax.crypto.spec.SecretKeySpec;
-import java.util.Base64;
 import java.util.Date;
 import java.util.UUID;
 
@@ -59,10 +58,10 @@ public class JwtUtil {
         Date expDate = new Date(expMillis);
         return Jwts.builder()
                 .setId(uuid)              //唯一的ID
-                .setSubject(subject)   // 主题  可以是JSON数据
-                .setIssuer("es")     // 签发者
-                .setIssuedAt(now)      // 签发时间
-                .signWith(signatureAlgorithm, secretKey) //使用HS256对称加密算法签 名, 第二个参数为秘钥
+                .setSubject(subject)
+                .setIssuer("ersan")
+                .setIssuedAt(now)
+                .signWith(signatureAlgorithm, secretKey)
                 .setExpiration(expDate);
     }
 
@@ -80,7 +79,7 @@ public class JwtUtil {
     }
 
     public static void main(String[] args) throws Exception {
-        String token = "eyJhbGciOiJIUzI1NiJ9.eyJqdGkiOiJjYWM2ZDVhZi1mNjVlLTQ0MDAtYjcxMi0zYWEwOGIyOTIwYjQiLCJzdWIiOiJzZyIsImlzcyI6InNnIiwiaWF0IjoxNjM4MTA2NzEyLCJleHAiOjE2MzgxMTAzMTJ9.J VsSbkP94wuczb4QryQbAke3ysBDIL5ou8fWsbt_ebg";
+        String token = createJWT("testSubject");
         Claims claims = parseJWT(token);
         System.out.println(claims);
     }
@@ -91,9 +90,8 @@ public class JwtUtil {
      * @return
      */
     public static SecretKey generalKey() {
-        byte[] encodedKey = Base64.getDecoder().decode(JwtUtil.JWT_KEY);
-        SecretKey key = new SecretKeySpec(encodedKey, 0, encodedKey.length,"AES");
-        return key;
+        byte[] encodedKey = JwtUtil.JWT_KEY.getBytes();
+        return new SecretKeySpec(encodedKey, 0, encodedKey.length, "HmacSHA256");
     }
 
     /**
@@ -112,4 +110,3 @@ public class JwtUtil {
     }
 
 }
-

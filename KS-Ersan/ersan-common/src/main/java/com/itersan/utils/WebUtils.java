@@ -1,5 +1,5 @@
 package com.itersan.utils;
-import javax.servlet.http.HttpServletResponse;
+import jakarta.servlet.http.HttpServletResponse;   //由javax转换为jakarta
 import java.io.IOException;
 public class WebUtils {
     /**

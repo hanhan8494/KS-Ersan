@@ -1,7 +1,5 @@
 package com.itersan.result;
 
-
-
 public class ResponseResult<T>  {
     /**
      * 状态码

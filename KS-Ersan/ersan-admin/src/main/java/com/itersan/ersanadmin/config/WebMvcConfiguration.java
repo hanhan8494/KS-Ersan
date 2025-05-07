@@ -18,7 +18,7 @@ public class WebMvcConfiguration implements WebMvcConfigurer {
     @Override
     public void addCorsMappings(CorsRegistry registry) {
         registry.addMapping("/**")
-                .allowedOrigins(webMvcProperties.getPath())  // 前端开发服务器地址
+                .allowedOrigins("127.0.0.1")  // 前端开发服务器地址 webMvcProperties.getPath()
                 .allowedMethods("GET", "POST", "PUT", "DELETE")  // 允许的HTTP方法
                 .allowedHeaders("*")  // 允许的请求头
                 .allowCredentials(true)  // 是否允许携带凭证（如 cookie）

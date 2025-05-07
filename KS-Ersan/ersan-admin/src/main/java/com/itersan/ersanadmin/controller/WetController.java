@@ -13,7 +13,7 @@ import reactor.core.publisher.Mono;
 @RestController
 @RequestMapping("/wet")
 @Slf4j
-public class WetControllert {
+public class WetController {
     @Autowired
     APIProperties apiProperties;
     @Autowired
